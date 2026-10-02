@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CityForge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>🏙️ CityForge</h1>
+
+        <p>Urban Development Simulator</p>
+
+    </header>
+
+
+    <section class="stats">
+
+        <div class="stat">
+            <h3>Year</h3>
+            <p id="year">2026</p>
+        </div>
+
+        <div class="stat">
+            <h3>Budget</h3>
+            <p id="budget">₹10 Cr</p>
+        </div>
+
+        <div class="stat">
+            <h3>Population</h3>
+            <p id="population">50,000</p>
+        </div>
+
+        <div class="stat">
+            <h3>Pollution</h3>
+            <p id="pollution">35%</p>
+        </div>
+
+        <div class="stat">
+            <h3>Happiness</h3>
+            <p id="happiness">65%</p>
+        </div>
+
+        <div class="stat">
+            <h3>Environment</h3>
+            <p id="environment">70%</p>
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <div id="city">
+
+            <h2>YOUR CITY</h2>
+
+            <div id="cityObjects">
+
+                <div class="building house">
+                    <div class="windows"></div>
+                    <div class="door"></div>
+                </div>
+
+                <div class="building house tall">
+                    <div class="windows"></div>
+                    <div class="door"></div>
+                </div>
+
+                <div class="building house">
+                    <div class="windows"></div>
+                    <div class="door"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="cityStats">
+
+            <h2>📊 City Statistics</h2>
+
+            <p>🏠 Houses: <span id="houseCount">0</span></p>
+
+            <p>🏥 Hospitals: <span id="hospitalCount">0</span></p>
+
+            <p>🌳 Parks: <span id="parkCount">0</span></p>
+
+            <p>🏭 Factories: <span id="factoryCount">0</span></p>
+
+            <p>☀️ Solar Plants: <span id="solarCount">0</span></p>
+
+            <p>🛣️ Roads: <span id="roadCount">0</span></p>
+
+        </div>
+
+
+        <div id="controls">
+
+            <h2>🏗️ Build Infrastructure</h2>
+
+            <button id="houseButton">🏠 House</button>
+
+            <button id="hospitalButton">🏥 Hospital</button>
+
+            <button id="roadButton">🛣️ Road</button>
+
+            <button id="parkButton">🌳 Park</button>
+
+            <button id="factoryButton">🏭 Factory</button>
+
+            <button id="solarButton">☀️ Solar Plant</button>
+
+            <button id="simulationButton">▶️ Run Simulation</button>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

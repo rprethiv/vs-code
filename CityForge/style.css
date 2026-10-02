@@ -1,0 +1,787 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    background: #eef2f5;
+
+    color: #222;
+
+}
+
+
+header {
+
+    background: #172b4d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 36px;
+
+}
+
+
+header p {
+
+    margin-top: 8px;
+
+    font-size: 18px;
+
+}
+
+
+/* TOP STATISTICS */
+
+.stats {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+}
+
+
+.stat {
+
+    background: white;
+
+    width: 150px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.stat h3 {
+
+    margin: 5px;
+
+}
+
+
+.stat p {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin: 10px;
+
+}
+
+
+/* MAIN */
+
+main {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+/* CITY */
+
+#city {
+
+    min-height: 450px;
+
+    width: 100%;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            #87ceeb 0%,
+            #bde7ff 55%,
+            #72c85b 55%,
+            #72c85b 100%
+        );
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+
+#city h2 {
+
+    color: white;
+
+    text-shadow: 2px 2px 4px #333;
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+
+/* CITY OBJECT AREA */
+
+#cityObjects {
+
+    position: relative;
+
+    z-index: 5;
+
+    min-height: 330px;
+
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    padding-bottom: 70px;
+
+}
+
+
+/* ROAD */
+
+#city::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 65px;
+
+    background: #444;
+
+    border-top: 5px solid #333;
+
+    z-index: 3;
+
+}
+
+
+/* ROAD LANE MARKINGS */
+
+#city::before {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 29px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 7px;
+
+    background: repeating-linear-gradient(
+        to right,
+        #ffffff 0px,
+        #ffffff 45px,
+        transparent 45px,
+        transparent 80px
+    );
+
+    z-index: 4;
+
+}
+
+
+/* ========================= */
+/* HOUSE */
+/* ========================= */
+
+.building {
+
+    width: 65px;
+
+    height: 145px;
+
+    background: linear-gradient(
+        to right,
+        #666,
+        #888
+    );
+
+    position: relative;
+
+    border-radius: 4px 4px 0 0;
+
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.building::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -22px;
+
+    left: -6px;
+
+    width: 0;
+
+    height: 0;
+
+    border-left: 38px solid transparent;
+
+    border-right: 38px solid transparent;
+
+    border-bottom: 25px solid #a33;
+
+}
+
+
+.building .windows {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 12px;
+
+    width: 15px;
+
+    height: 15px;
+
+    background: #bdefff;
+
+    box-shadow:
+        26px 0 #bdefff,
+        0 30px #bdefff,
+        26px 30px #bdefff;
+
+}
+
+
+.building .door {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 23px;
+
+    width: 20px;
+
+    height: 35px;
+
+    background: #432b1c;
+
+}
+
+
+.building.tall {
+
+    height: 190px;
+
+    background: linear-gradient(
+        to right,
+        #555,
+        #777
+    );
+
+}
+
+
+/* ========================= */
+/* HOSPITAL */
+/* ========================= */
+
+.hospital {
+
+    width: 115px;
+
+    height: 105px;
+
+    background: white;
+
+    position: relative;
+
+    border-radius: 5px;
+
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.3);
+
+    border-bottom: 12px solid #d9d9d9;
+
+}
+
+
+.hospital::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 38px;
+
+    width: 40px;
+
+    height: 40px;
+
+    background: #e53935;
+
+    clip-path: polygon(
+        35% 0%,
+        65% 0%,
+        65% 35%,
+        100% 35%,
+        100% 65%,
+        65% 65%,
+        65% 100%,
+        35% 100%,
+        35% 65%,
+        0% 65%,
+        0% 35%,
+        35% 35%
+    );
+
+}
+
+
+.hospital::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 47px;
+
+    width: 22px;
+
+    height: 35px;
+
+    background: #5b6f82;
+
+}
+
+
+/* ========================= */
+/* PARK */
+/* ========================= */
+
+.park {
+
+    width: 135px;
+
+    height: 95px;
+
+    background: #4caf50;
+
+    border: 5px solid #2e7d32;
+
+    border-radius: 12px;
+
+    position: relative;
+
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* TREE TRUNKS */
+
+.park::before {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 30px;
+
+    width: 10px;
+
+    height: 35px;
+
+    background: #704214;
+
+    box-shadow: 60px 5px #704214;
+
+}
+
+
+/* TREE TOPS */
+
+.park::after {
+
+    content: "●   ●";
+
+    position: absolute;
+
+    top: 5px;
+
+    left: 20px;
+
+    font-size: 45px;
+
+    color: #145a25;
+
+    letter-spacing: 20px;
+
+}
+
+
+/* ========================= */
+/* FACTORY */
+/* ========================= */
+
+.factory {
+
+    width: 130px;
+
+    height: 110px;
+
+    background: #68727c;
+
+    position: relative;
+
+    border-radius: 4px;
+
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* FACTORY ROOF */
+
+.factory::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -18px;
+
+    left: 0;
+
+    width: 130px;
+
+    height: 20px;
+
+    background: #414950;
+
+}
+
+
+/* FACTORY CHIMNEY */
+
+.factory::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -55px;
+
+    right: 20px;
+
+    width: 20px;
+
+    height: 55px;
+
+    background: #4a4a4a;
+
+}
+
+
+/* FACTORY DOOR */
+
+.factory {
+
+    background:
+        linear-gradient(
+            transparent 0,
+            transparent 45%,
+            #444 45%,
+            #444 100%
+        ),
+        #68727c;
+
+}
+
+
+/* ========================= */
+/* SOLAR PLANT */
+/* ========================= */
+
+.solar {
+
+    width: 145px;
+
+    height: 90px;
+
+    background: #78b84a;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    border: 3px solid #4d8c2d;
+
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* SOLAR PANELS */
+
+.solar::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 22px;
+
+    left: 20px;
+
+    width: 45px;
+
+    height: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123d68,
+            #2877a8
+        );
+
+    border: 3px solid #d6e4ee;
+
+    transform: skewX(-12deg);
+
+    box-shadow:
+        55px 0 #2877a8;
+
+}
+
+
+/* SOLAR SUPPORTS */
+
+.solar::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 5px;
+
+    left: 38px;
+
+    width: 5px;
+
+    height: 30px;
+
+    background: #555;
+
+    box-shadow: 55px 0 #555;
+
+}
+
+
+/* ========================= */
+/* ROAD OBJECT */
+/* ========================= */
+
+.roadObject {
+
+    width: 120px;
+
+    height: 55px;
+
+    background: #444;
+
+    border-top: 4px solid #333;
+
+    border-bottom: 4px solid #333;
+
+    position: relative;
+
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.roadObject::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 23px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 6px;
+
+    background: repeating-linear-gradient(
+        to right,
+        white 0px,
+        white 25px,
+        transparent 25px,
+        transparent 45px
+    );
+
+}
+
+
+/* CITY STATISTICS */
+
+#cityStats {
+
+    background: white;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+
+}
+
+
+#cityStats h2 {
+
+    margin-top: 0;
+
+}
+
+
+#cityStats p {
+
+    font-size: 17px;
+
+}
+
+
+/* CONTROLS */
+
+#controls {
+
+    background: white;
+
+    margin-top: 20px;
+
+    margin-bottom: 30px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+
+}
+
+
+#controls h2 {
+
+    margin-top: 0;
+
+}
+
+
+button {
+
+    padding: 12px 18px;
+
+    margin: 6px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #172b4d;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    background: #294d7a;
+
+}
+
+
+#simulationButton {
+
+    background: #16803c;
+
+}
+
+
+#simulationButton:hover {
+
+    background: #0f632e;
+
+}
