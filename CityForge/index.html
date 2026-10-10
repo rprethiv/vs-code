@@ -1,130 +1,369 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050914">
 
-    <title>CityForge</title>
+    <title>CityForge | Urban Intelligence</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <header>
+    <div class="app-shell">
 
-        <h1>🏙️ CityForge</h1>
+        <!-- TOP COMMAND BAR -->
+        <header class="topbar">
 
-        <p>Urban Development Simulator</p>
+            <div class="brand">
+                <div class="brand-icon">CF<span>+</span></div>
 
-    </header>
-
-
-    <section class="stats">
-
-        <div class="stat">
-            <h3>Year</h3>
-            <p id="year">2026</p>
-        </div>
-
-        <div class="stat">
-            <h3>Budget</h3>
-            <p id="budget">₹10 Cr</p>
-        </div>
-
-        <div class="stat">
-            <h3>Population</h3>
-            <p id="population">50,000</p>
-        </div>
-
-        <div class="stat">
-            <h3>Pollution</h3>
-            <p id="pollution">35%</p>
-        </div>
-
-        <div class="stat">
-            <h3>Happiness</h3>
-            <p id="happiness">65%</p>
-        </div>
-
-        <div class="stat">
-            <h3>Environment</h3>
-            <p id="environment">70%</p>
-        </div>
-
-    </section>
-
-
-    <main>
-
-        <div id="city">
-
-            <h2>YOUR CITY</h2>
-
-            <div id="cityObjects">
-
-                <div class="building house">
-                    <div class="windows"></div>
-                    <div class="door"></div>
+                <div class="brand-copy">
+                    <h1>CityForge<span>.</span></h1>
+                    <p>URBAN INTELLIGENCE PLATFORM</p>
                 </div>
-
-                <div class="building house tall">
-                    <div class="windows"></div>
-                    <div class="door"></div>
-                </div>
-
-                <div class="building house">
-                    <div class="windows"></div>
-                    <div class="door"></div>
-                </div>
-
             </div>
 
-        </div>
+            <div class="system-status">
+                <span class="status-dot"></span>
+                ALL SYSTEMS OPERATIONAL
+            </div>
+
+            <div class="topbar-right">
+                <span class="topbar-label">DIGITAL TWIN / SIMULATION</span>
+                <span class="live-indicator">
+                    <span class="live-dot"></span>
+                    LIVE ENVIRONMENT
+                </span>
+            </div>
+
+        </header>
 
 
-        <div id="cityStats">
+        <!-- COMMAND CENTER INTRO -->
+        <section class="overview-heading">
 
-            <h2>📊 City Statistics</h2>
+            <div class="overview-copy">
+                <p class="eyebrow">COMMAND CENTER <span>/</span> METROPOLITAN SYSTEMS</p>
+                <h2>Shape the future<span class="heading-period">.</span></h2>
+                <p class="section-description">
+                    Engineer a smarter city. Balance growth, sustainability and citizen wellbeing.
+                </p>
+            </div>
 
-            <p>🏠 Houses: <span id="houseCount">0</span></p>
+            <div class="era-badge">
+                <div class="era-icon">◈</div>
+                <div>
+                    <span class="mini-label">CIVILIZATION PHASE</span>
+                    <strong id="cityEra">Emerging</strong>
+                </div>
+                <div class="era-status-dot"></div>
+            </div>
 
-            <p>🏥 Hospitals: <span id="hospitalCount">0</span></p>
-
-            <p>🌳 Parks: <span id="parkCount">0</span></p>
-
-            <p>🏭 Factories: <span id="factoryCount">0</span></p>
-
-            <p>☀️ Solar Plants: <span id="solarCount">0</span></p>
-
-            <p>🛣️ Roads: <span id="roadCount">0</span></p>
-
-        </div>
-
-
-        <div id="controls">
-
-            <h2>🏗️ Build Infrastructure</h2>
-
-            <button id="houseButton">🏠 House</button>
-
-            <button id="hospitalButton">🏥 Hospital</button>
-
-            <button id="roadButton">🛣️ Road</button>
-
-            <button id="parkButton">🌳 Park</button>
-
-            <button id="factoryButton">🏭 Factory</button>
-
-            <button id="solarButton">☀️ Solar Plant</button>
-
-            <button id="simulationButton">▶️ Run Simulation</button>
-
-        </div>
-
-    </main>
+        </section>
 
 
+        <!-- KEY CITY METRICS -->
+        <section class="stats">
+
+            <div class="stat stat-year">
+                <div class="stat-heading">
+                    <span>SIMULATION YEAR</span>
+                    <span class="stat-icon">◷</span>
+                </div>
+                <p id="year">2026</p>
+                <div class="stat-bottom">
+                    <span class="metric-line"></span>
+                    <small>City timeline</small>
+                </div>
+            </div>
+
+            <div class="stat stat-budget">
+                <div class="stat-heading">
+                    <span>AVAILABLE CAPITAL</span>
+                    <span class="stat-icon">₹</span>
+                </div>
+                <p id="budget">₹10 Cr</p>
+                <div class="stat-bottom">
+                    <span class="metric-line"></span>
+                    <small>Development funds</small>
+                </div>
+            </div>
+
+            <div class="stat stat-population">
+                <div class="stat-heading">
+                    <span>POPULATION</span>
+                    <span class="stat-icon">♙</span>
+                </div>
+                <p id="population">50,000</p>
+                <div class="stat-bottom">
+                    <span class="metric-line"></span>
+                    <small>City residents</small>
+                </div>
+            </div>
+
+            <div class="stat stat-pollution">
+                <div class="stat-heading">
+                    <span>POLLUTION INDEX</span>
+                    <span class="stat-icon">⌁</span>
+                </div>
+                <p id="pollution">35%</p>
+                <div class="stat-bottom">
+                    <span class="metric-line"></span>
+                    <small>Environmental load</small>
+                </div>
+            </div>
+
+            <div class="stat stat-happiness">
+                <div class="stat-heading">
+                    <span>CITIZEN HAPPINESS</span>
+                    <span class="stat-icon">♡</span>
+                </div>
+                <p id="happiness">65%</p>
+                <div class="stat-bottom">
+                    <span class="metric-line"></span>
+                    <small>Wellbeing index</small>
+                </div>
+            </div>
+
+            <div class="stat stat-environment">
+                <div class="stat-heading">
+                    <span>ECOLOGICAL HEALTH</span>
+                    <span class="stat-icon">✳</span>
+                </div>
+                <p id="environment">70%</p>
+                <div class="stat-bottom">
+                    <span class="metric-line"></span>
+                    <small>Green city index</small>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- MAIN COMMAND WORKSPACE -->
+        <main class="dashboard-grid">
+
+            <!-- CENTRAL 3D ENVIRONMENT -->
+            <section class="panel city-panel">
+
+                <div class="panel-header">
+                    <div class="panel-title">
+                        <p class="eyebrow">01 <span>/</span> SPATIAL INTELLIGENCE</p>
+                        <h2>Metropolitan Digital Twin</h2>
+                        <p class="panel-subtitle">Interactive city environment and infrastructure planning</p>
+                    </div>
+
+                    <div class="view-status">
+                        <span class="status-dot"></span>
+                        ENGINE ONLINE
+                    </div>
+                </div>
+
+                <div id="city">
+
+                    <div class="city-overlay-title">
+                        <span class="overlay-label">
+                            <span class="overlay-pulse"></span>
+                            LIVE CITY MODEL
+                        </span>
+                        <span class="overlay-coordinate">GRID SYSTEM <b>40 × 40</b></span>
+                    </div>
+
+                    <div class="city-hud city-hud-left">
+                        <span class="hud-label">OPERATION</span>
+                        <strong>URBAN EXPANSION</strong>
+                        <span class="hud-divider"></span>
+                        <span class="hud-label">RENDER MODE</span>
+                        <strong>REAL-TIME 3D</strong>
+                    </div>
+
+                    <div id="locationMessage">
+                        Select a building, then move your mouse over the city.
+                    </div>
+
+                    <div id="cityObjects"></div>
+
+                    <div class="city-bottom-overlay">
+                        <span><i class="legend-dot cyan"></i> Placement system</span>
+                        <span><i class="legend-dot green"></i> Sustainable infrastructure</span>
+                    </div>
+
+                    <div class="city-corner city-corner-tl"></div>
+                    <div class="city-corner city-corner-tr"></div>
+                    <div class="city-corner city-corner-bl"></div>
+                    <div class="city-corner city-corner-br"></div>
+
+                </div>
+
+                <div class="city-footer">
+                    <span><i class="footer-live-dot"></i> CITY SIMULATION ACTIVE</span>
+                    <span>THREE.JS <b>·</b> SPATIAL ENGINE</span>
+                </div>
+
+            </section>
+
+
+            <!-- CITY OPERATIONS SIDEBAR -->
+            <aside class="sidebar">
+
+                <!-- INFRASTRUCTURE ASSETS -->
+                <section id="cityStats" class="panel infrastructure-panel">
+
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <p class="eyebrow">02 <span>/</span> ASSET REGISTER</p>
+                            <h2>Infrastructure</h2>
+                        </div>
+                        <span class="panel-symbol">▦</span>
+                    </div>
+
+                    <div class="asset-list">
+
+                        <div class="asset-row">
+                            <span class="asset-icon">⌂</span>
+                            <span class="asset-name">Residential</span>
+                            <strong id="houseCount">0</strong>
+                        </div>
+
+                        <div class="asset-row">
+                            <span class="asset-icon">✚</span>
+                            <span class="asset-name">Healthcare</span>
+                            <strong id="hospitalCount">0</strong>
+                        </div>
+
+                        <div class="asset-row">
+                            <span class="asset-icon">♧</span>
+                            <span class="asset-name">Green spaces</span>
+                            <strong id="parkCount">0</strong>
+                        </div>
+
+                        <div class="asset-row">
+                            <span class="asset-icon">⚙</span>
+                            <span class="asset-name">Industry</span>
+                            <strong id="factoryCount">0</strong>
+                        </div>
+
+                        <div class="asset-row">
+                            <span class="asset-icon">☀</span>
+                            <span class="asset-name">Solar energy</span>
+                            <strong id="solarCount">0</strong>
+                        </div>
+
+                        <div class="asset-row">
+                            <span class="asset-icon">↔</span>
+                            <span class="asset-name">Road network</span>
+                            <strong id="roadCount">0</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="asset-summary">
+                        <span class="asset-summary-icon">◈</span>
+                        <div>
+                            <strong>Urban infrastructure</strong>
+                            <small>Live asset monitoring</small>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- CONSTRUCTION CONTROL -->
+                <section id="controls" class="panel controls-panel">
+
+                    <div class="panel-header">
+                        <div class="panel-title">
+                            <p class="eyebrow">03 <span>/</span> DEPLOYMENT</p>
+                            <h2>Build Infrastructure</h2>
+                        </div>
+                    </div>
+
+                    <p class="control-description">
+                        Choose an asset. Position it in the city to begin construction.
+                    </p>
+
+                    <div class="build-grid">
+
+                        <button id="houseButton" class="build-button" type="button">
+                            <span class="build-icon">⌂</span>
+                            <span>Residential</span>
+                            <small>₹1 Cr</small>
+                        </button>
+
+                        <button id="hospitalButton" class="build-button" type="button">
+                            <span class="build-icon">✚</span>
+                            <span>Hospital</span>
+                            <small>₹2 Cr</small>
+                        </button>
+
+                        <button id="parkButton" class="build-button" type="button">
+                            <span class="build-icon">♧</span>
+                            <span>Green park</span>
+                            <small>₹1 Cr</small>
+                        </button>
+
+                        <button id="factoryButton" class="build-button" type="button">
+                            <span class="build-icon">⚙</span>
+                            <span>Industry</span>
+                            <small>₹3 Cr</small>
+                        </button>
+
+                        <button id="solarButton" class="build-button" type="button">
+                            <span class="build-icon">☀</span>
+                            <span>Solar plant</span>
+                            <small>₹2 Cr</small>
+                        </button>
+
+                        <button id="roadButton" class="build-button" type="button">
+                            <span class="build-icon">↔</span>
+                            <span>Road network</span>
+                            <small>₹1 Cr</small>
+                        </button>
+
+                    </div>
+
+                    <div class="deployment-note">
+                        <span class="deployment-dot"></span>
+                        <span>Placement preview enabled</span>
+                    </div>
+
+                    <button id="simulationButton" class="primary-action" type="button">
+                        <span class="action-icon">▶</span>
+                        Run City Simulation
+                        <span class="action-arrow">↗</span>
+                    </button>
+
+                    <button id="dayNightBtn" class="secondary-action" type="button">
+                        ☾ Switch to Night
+                    </button>
+
+                </section>
+
+            </aside>
+
+        </main>
+
+
+        <!-- SYSTEM FOOTER -->
+        <footer class="app-footer">
+            <span>CITYFORGE <i class="footer-accent">●</i> URBAN DEVELOPMENT SIMULATOR</span>
+            <span>ENGINEER A SMARTER TOMORROW <b>·</b> DIGITAL TWIN SYSTEM</span>
+        </footer>
+
+    </div>
+
+
+    <!-- THREE.JS ENGINE -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
     <script src="script.js"></script>
 
 </body>
